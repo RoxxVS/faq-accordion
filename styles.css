@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-pink: hsl(275, 100%, 97%);
+    --color-grayish-purple: hsl(292, 16%, 49%);
+    --color-dark-purple: hsl(292, 42%, 14%);
+    --color-hover: #AD28EB;
+}
+/*.work-sans-<uniquifier> {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+}
+body {
+    background-color: var(--color-light-pink);
+    background-image: url(images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+main {
+    background-color: var(--color-white);
+    width: 40vw;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+h1 {
+    font-size: 2rem;
+    color: var(--color-dark-purple);
+}
+h5 {
+    font-size: 1rem;
+}
+p {
+    
+    color: var(--color-grayish-purple);
+}
+.titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.principal {
+    gap: 15px;
+}
+.estrella {
+    width: 20px;
+}
+.desplegable .titulo {
+    justify-content: space-between;
+}
+.desplegable .titulo:hover {
+    color: var(--color-hover);
+    cursor: pointer;
+}
+.desplegable .titulo img {
+    width: 20px;
+}
+.desplegable .oculto {
+    display: none;
+}
+@media (max-width: 900px) {
+    body {
+        background-image: url(images/background-pattern-mobile.svg);
+        background-size: contain;
+    }
+    main {
+        width: 90vw;
+    }
+}
